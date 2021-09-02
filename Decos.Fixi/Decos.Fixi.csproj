@@ -96,7 +96,7 @@
       <Version>5.2.7</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>13.0.1</Version>
+      <Version>10.0.3</Version>
     </PackageReference>
     <PackageReference Include="Refit">
       <Version>4.2.0</Version>
