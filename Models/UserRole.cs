@@ -30,6 +30,11 @@ namespace Decos.Fixi.Models
     /// <summary>
     /// The user is an Admin.
     /// </summary>
-    Admin
+    Admin,
+
+    /// <summary>
+    /// The user is a Super Admin.
+    /// </summary>
+    SuperAdmin
   }
 }
