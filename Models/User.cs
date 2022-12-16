@@ -68,16 +68,6 @@ namespace Decos.Fixi.Models
     public string PhoneNumber { get; set; }
 
     /// <summary>
-    /// Flag for checking if the user is on absence/ leave
-    /// </summary>
-    public bool IsAbsent { get; set; }
-
-    /// <summary>
-    /// Gets or sets the verified flag for user
-    /// </summary>
-    public bool IsVerified { get; set; }
-
-    /// <summary>
     /// Gets a uniquely identifying tag which can be used in push notifications.
     /// </summary>
     public string UniqueTag => $"id:{ID:N}";
