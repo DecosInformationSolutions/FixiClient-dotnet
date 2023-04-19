@@ -70,6 +70,11 @@ namespace Decos.Fixi.Models
     public string DisplayName { get; set; }
 
     /// <summary>
+    /// Gets or sets name which can be used for email from property (optional).
+    /// </summary>
+    public string EmailFromName { get; set; }
+
+    /// <summary>
     /// Gets or sets the short name of the organization that owns the region, or
     /// a null reference if the region is not owned by a customer.
     /// </summary>
