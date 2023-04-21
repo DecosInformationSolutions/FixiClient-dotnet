@@ -143,6 +143,7 @@ namespace Decos.Fixi.Http
     /// <param name="to">If specified, only issues created on or before this date will be returned.</param>
     /// <param name="isManaged">If specified, filters issues based on whether the associated region is managed by an organization.</param>
     /// <param name="hasRegion">If specified, filters issues based on whether a region is associated.</param>
+    /// <param name="searchFromAllData">If true the search would be done on all data. If false it will search in last 1 year data.</param>
     /// <param name="page">An optional non-zero positive integer indicating the number of the page to retrieve.</param>
     /// <param name="count">An optional non-zero positive integer indicating the number of results to return per page.</param>
     /// <param name="cancellationToken">A token to monitor for cancellation requests.</param>
@@ -159,11 +160,12 @@ namespace Decos.Fixi.Http
         DateTimeOffset? to = null,
         bool? isManaged = null,
         bool? hasRegion = null,
+        bool searchFromAllData = false,
         int page = 1,
         int count = 20,
         CancellationToken cancellationToken = default)
     {
-      var args = new { q, searchPrivateInfo, reportedBy, assignedTo, region, category, status, from, to, isManaged, hasRegion, page, count };
+      var args = new { q, searchPrivateInfo, reportedBy, assignedTo, region, category, status, from, to, isManaged, hasRegion, searchFromAllData, page, count };
       return GetAsync<ListPage<IssueListItem>>("/issues", args, cancellationToken);
     }
 
