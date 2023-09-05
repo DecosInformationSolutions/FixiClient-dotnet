@@ -36,6 +36,11 @@ namespace Decos.Fixi.Models
     public Guid? CustomerID { get; set; }
 
     /// <summary>
+    /// Gets or sets a value that describes whether the organization is a paid customer or not
+    /// </summary>
+    public bool IsPaidCustomer { get; set; }
+
+    /// <summary>
     /// Gets or sets the email address of the organization where replies should
     /// be sent to.
     /// </summary>
