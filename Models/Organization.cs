@@ -77,6 +77,11 @@ namespace Decos.Fixi.Models
     public string WebsiteAddress { get; set; }
 
     /// <summary>
+    /// Custom feedback URL for organization
+    /// </summary>
+    public string FeedBackUrl { get; set; }
+
+    /// <summary>
     /// Gets or sets the email domains of the organization (',' seperated).
     /// </summary>
     public string EmailDomains { get; set; }
