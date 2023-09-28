@@ -72,6 +72,11 @@ namespace Decos.Fixi.Models
     public string ShortName { get; set; }
 
     /// <summary>
+    /// Get or set country name of the organization
+    /// </summary>
+    public string Country { get; set; }
+
+    /// <summary>
     /// Gets or sets the URL to the website of the organization.
     /// </summary>
     public string WebsiteAddress { get; set; }
