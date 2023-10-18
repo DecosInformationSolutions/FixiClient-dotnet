@@ -16,12 +16,14 @@ namespace Decos.Fixi
     /// </summary>
     /// <param name="page">An optional non-zero positive integer indicating the number of the page to retrieve.</param>
     /// <param name="count">An optional non-zero positive integer indicating the number of results to return per page.</param>
+    /// <param name="country">An optional country parameter to filter results</param>
     /// <param name="cancellationToken">A token to monitor for cancellation requests.</param>
     /// <returns>A task representing the asynchronous operation.</returns>
     [Get("/organizations/listAdmin")]
     Task<ListPage<Organization>> FindAsync(
         int page = 1,
         int count = 20,
+        string country = null,
         CancellationToken cancellationToken = default(CancellationToken));
 
     /// <summary>
