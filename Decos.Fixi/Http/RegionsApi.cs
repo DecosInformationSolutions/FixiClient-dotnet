@@ -108,6 +108,7 @@ namespace Decos.Fixi.Http
     /// <summary>
     /// Returns a list of regions, ordered by name.
     /// </summary>
+    /// <param name="country">Optional filter Country Name</param>
     /// <param name="name">Optional filter Region Name</param>
     /// <param name="organization">Optional filter Organization Name</param>
     /// <param name="emailAddress">Optional filter email address</param>
@@ -128,9 +129,9 @@ namespace Decos.Fixi.Http
     /// A token to monitor for cancellation requests.
     /// </param>
     /// <returns>A task that returns a single page of regions.</returns>
-    public Task<ListPage<RegionResponse>> SearchAsync(string name = null, string organization = null, string emailAddress = null, bool? all = null, int page = 1, int count = 20, CancellationToken cancellationToken = default(CancellationToken))
+    public Task<ListPage<RegionResponse>> SearchAsync(string country = null, string name = null, string organization = null, string emailAddress = null, bool? all = null, int page = 1, int count = 20, CancellationToken cancellationToken = default(CancellationToken))
     {
-      var args = new { name, organization, emailAddress, all, page, count };
+      var args = new { country, name, organization, emailAddress, all, page, count };
       return GetAsync<ListPage<RegionResponse>>("/regions/search", args, cancellationToken);
     }
 
