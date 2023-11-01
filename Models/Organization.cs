@@ -77,6 +77,11 @@ namespace Decos.Fixi.Models
     public string Country { get; set; }
 
     /// <summary>
+    /// Get or set language preference of the organization
+    /// </summary>
+    public string Language { get; set; }
+
+    /// <summary>
     /// Gets or sets the URL to the website of the organization.
     /// </summary>
     public string WebsiteAddress { get; set; }
