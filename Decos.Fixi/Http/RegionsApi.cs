@@ -149,6 +149,18 @@ namespace Decos.Fixi.Http
     }
 
     /// <summary>
+    /// Returns all the regions with name and polygon data.
+    /// </summary>
+    /// <param name="country">The country for which regions are required.</param>
+    /// <param name="cancellationToken">
+    /// <returns>Returns all the regions with name and polygon data.</returns>
+    public Task<List<RegionPolygonData>> GetAllRegionsLiteAsync(string country)
+    {
+      CancellationToken cancellationToken = CancellationToken.None;
+      return GetAsync<List<RegionPolygonData>>($"/regions/getallregionsliteasync?country={Uri.EscapeDataString(country)}", cancellationToken);
+    }
+
+    /// <summary>
     /// Returns the geometry data for a region as polyline-encoded strings.
     /// </summary>
     /// <param name="region">The short name of the region.</param>

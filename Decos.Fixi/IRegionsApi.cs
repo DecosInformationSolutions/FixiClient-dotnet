@@ -117,6 +117,13 @@ namespace Decos.Fixi
     Task<RegionResponse> GetAsync(string region, CancellationToken cancellationToken);
 
     /// <summary>
+    /// Returns all the regions with name and polygon data.
+    /// </summary>
+    /// <param name="country">The country for which regions are required.</param>
+    /// <returns>Returns all the regions with name and polygon data.</returns>
+    Task<List<RegionPolygonData>> GetAllRegionsLiteAsync(string country);
+
+    /// <summary>
     /// Returns the geometry data for a region as polyline-encoded strings.
     /// </summary>
     /// <param name="region">The short name of the region.</param>
