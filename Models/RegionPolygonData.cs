@@ -1,4 +1,6 @@
-﻿namespace Decos.Fixi.Models
+﻿using System.Collections.Generic;
+
+namespace Decos.Fixi.Models
 {
   /// <summary>
   /// RegionPolygonData
@@ -45,5 +47,10 @@
     /// Gets or sets a polygon that represents the area covered by the region.
     /// </summary>
     public Polygon Polygon { get; set; }
+
+    /// <summary>
+    /// Gets or sets a encoded polygon that represents the area covered by the region.
+    /// </summary>
+    public IEnumerable<EncodedPolygon> PolygonEncoded { get; set; }
   }
 }
