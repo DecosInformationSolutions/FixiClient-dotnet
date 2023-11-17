@@ -167,7 +167,8 @@ namespace Decos.Fixi.Http
     public Task<string> DeleteRegionAsync(Guid regionId)
     {
       CancellationToken cancellationToken = CancellationToken.None;
-      return PostAsync<string>($"/regions/deleteRegion", regionId, cancellationToken);
+      var args = new { regionId };
+      return PostAsync<string>($"/regions/deleteRegion", args, cancellationToken);
     }
 
     /// <summary>
