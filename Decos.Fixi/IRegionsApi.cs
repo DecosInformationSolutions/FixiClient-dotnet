@@ -127,7 +127,7 @@ namespace Decos.Fixi
     /// Delete a region.
     /// </summary>
     /// <returns>An asynchronous operation returning the result of the action.</returns>
-    Task DeleteRegionAsync(Guid regionId);
+    Task<string> DeleteRegionAsync(Guid regionId);
 
     /// <summary>
     /// Returns the geometry data for a region as polyline-encoded strings.

@@ -95,6 +95,21 @@ namespace Decos.Fixi.Http
     }
 
     /// <summary>
+    /// Sends a GET request to the specified URI using an object to provide request parameters.
+    /// </summary>
+    /// <typeparam name="TResult">The type of object to read.</typeparam>
+    /// <param name="requestUri">The URI to send a request to.</param>
+    /// <param name="parameters">An object whose public properties are sent as query string parameters.</param>
+    /// <param name="cancellationToken">A token to monitor for cancellation requests.</param>
+    /// <returns>A task that returns an object instance of the specified type.</returns>
+    /// <exception cref="ApiException">An error occurred the request.</exception>
+    /// <exception cref="InvalidResponseFormatException">An error occurred during deserialization of the response.</exception>
+    protected Task<TResult> PostAsync<TResult>(string requestUri, object parameters, CancellationToken cancellationToken)
+    {
+      return SendAsync<TResult>(HttpMethod.Post, requestUri, parameters, cancellationToken);
+    }
+
+    /// <summary>
     /// Sends a POST request to the specified URI with the specified content.
     /// </summary>
     /// <typeparam name="T">The type of object to send.</typeparam>

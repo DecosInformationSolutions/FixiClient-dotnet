@@ -164,10 +164,10 @@ namespace Decos.Fixi.Http
     /// Delete a region.
     /// </summary>
     /// <returns>An asynchronous operation returning the result of the action.</returns>
-    public Task DeleteRegionAsync(Guid regionId)
+    public Task<string> DeleteRegionAsync(Guid regionId)
     {
       CancellationToken cancellationToken = CancellationToken.None;
-      return PostAsync<Guid, Task>($"/regions/deleteRegion", regionId, cancellationToken);
+      return PostAsync<string>($"/regions/deleteRegion", regionId, cancellationToken);
     }
 
     /// <summary>
