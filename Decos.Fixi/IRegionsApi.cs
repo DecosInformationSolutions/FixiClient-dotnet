@@ -124,6 +124,12 @@ namespace Decos.Fixi
     Task<List<RegionPolygonData>> GetAllRegionsLiteAsync(string country);
 
     /// <summary>
+    /// Delete a region.
+    /// </summary>
+    /// <returns>An asynchronous operation returning the result of the action.</returns>
+    Task DeleteRegionAsync(Guid regionId);
+
+    /// <summary>
     /// Returns the geometry data for a region as polyline-encoded strings.
     /// </summary>
     /// <param name="region">The short name of the region.</param>

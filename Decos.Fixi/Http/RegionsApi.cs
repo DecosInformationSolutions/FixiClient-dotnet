@@ -161,6 +161,16 @@ namespace Decos.Fixi.Http
     }
 
     /// <summary>
+    /// Delete a region.
+    /// </summary>
+    /// <returns>An asynchronous operation returning the result of the action.</returns>
+    public Task DeleteRegionAsync(Guid regionId)
+    {
+      CancellationToken cancellationToken = CancellationToken.None;
+      return GetAsync($"/regions/deleteRegion?regionId={regionId}", cancellationToken);
+    }
+
+    /// <summary>
     /// Returns the geometry data for a region as polyline-encoded strings.
     /// </summary>
     /// <param name="region">The short name of the region.</param>
