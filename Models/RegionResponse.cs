@@ -8,6 +8,11 @@ namespace Decos.Fixi.Models
   public class RegionResponse
   {
     /// <summary>
+    /// The ID of the region.
+    /// </summary>
+    public Guid ID { get; set; }
+
+    /// <summary>
     /// Gets or sets an connect configuration id of the organization that is used to connect with join
     /// </summary>
     public ConnectConfiguration ConnectConfiguration { get; set; }
