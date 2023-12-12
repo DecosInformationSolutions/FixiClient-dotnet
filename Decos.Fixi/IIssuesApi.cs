@@ -45,6 +45,7 @@ namespace Decos.Fixi
     /// <param name="from">If specified, only issues created on or after this date will be included.</param>
     /// <param name="to">If specified, only issues created on or before this date will be included.</param>
     /// <param name="isManaged">If specified, filters issues based on whether the associated region is managed by an organization.</param>
+    /// <param name="isPaidCustomer">If specified, filters issues based on whether the associated region is managed by a paid/ free organization.</param>
     /// <param name="hasRegion">If specified, filters issues based on whether a region is associated.</param>
     /// <param name="cancellationToken">A token to monitor for cancellation requests.</param>
     /// <returns>A task that represents the asynchronous operation.</returns>
@@ -58,6 +59,7 @@ namespace Decos.Fixi
         DateTimeOffset? from = null,
         DateTimeOffset? to = null,
         bool? isManaged = null,
+        bool? isPaidCustomer = null,
         bool? hasRegion = null,
         CancellationToken cancellationToken = default);
 
@@ -81,6 +83,7 @@ namespace Decos.Fixi
     /// <param name="from">If specified, only issues created on or after this date will be included.</param>
     /// <param name="to">If specified, only issues created on or before this date will be included.</param>
     /// <param name="isManaged">If specified, filters issues based on whether the associated region is managed by an organization.</param>
+    /// <param name="isPaidCustomer">If specified, filters issues based on whether the associated region is managed by a paid/ free organization.</param>
     /// <param name="hasRegion">If specified, filters issues based on whether a region is associated.</param>
     /// <param name="cancellationToken">A token to monitor for cancellation requests.</param>
     /// <returns>A task that represents the asynchronous operation.</returns>
@@ -102,6 +105,7 @@ namespace Decos.Fixi
         DateTimeOffset? from = null,
         DateTimeOffset? to = null,
         bool? isManaged = null,
+        bool? isPaidCustomer = null,
         bool? hasRegion = null,
         CancellationToken cancellationToken = default);
 
@@ -118,6 +122,7 @@ namespace Decos.Fixi
     /// <param name="from">If specified, only issues created on or after this date will be returned.</param>
     /// <param name="to">If specified, only issues created on or before this date will be returned.</param>
     /// <param name="isManaged">If specified, filters issues based on whether the associated region is managed by an organization.</param>
+    /// <param name="isPaidCustomer">If specified, filters issues based on whether the associated region is managed by a paid/ free organization.</param>
     /// <param name="hasRegion">If specified, filters issues based on whether a region is associated.</param>
     /// <param name="searchFromAllData">If true the search would be done on all data. If false it will search in last 1 year data.</param>
     /// <param name="page">An optional non-zero positive integer indicating the number of the page to retrieve.</param>
@@ -135,6 +140,7 @@ namespace Decos.Fixi
         DateTimeOffset? from = null,
         DateTimeOffset? to = null,
         bool? isManaged = null,
+        bool? isPaidCustomer = null,
         bool? hasRegion = null,
         bool searchFromAllData = false,
         int page = 1, int count = 20,
@@ -160,6 +166,7 @@ namespace Decos.Fixi
     /// <param name="from">If specified, only issues created on or after this date will be returned.</param>
     /// <param name="to">If specified, only issues created on or before this date will be returned.</param>
     /// <param name="isManaged">If specified, filters issues based on whether the associated region is managed by an organization.</param>
+    /// <param name="isPaidCustomer">If specified, filters issues based on whether the associated region is managed by a paid/ free organization.</param>
     /// <param name="hasRegion">If specified, filters issues based on whether a region is associated.</param>
     /// <param name="page">An optional non-zero positive integer indicating the number of the page to retrieve.</param>
     /// <param name="count">An optional non-zero positive integer indicating the number of results to return per page.</param>
@@ -183,6 +190,7 @@ namespace Decos.Fixi
         DateTimeOffset? from = null,
         DateTimeOffset? to = null,
         bool? isManaged = null,
+        bool? isPaidCustomer = null,
         bool? hasRegion = null,
         int page = 1, int count = 20,
         CancellationToken cancellationToken = default);
@@ -225,6 +233,7 @@ namespace Decos.Fixi
     /// <param name="from">If specified, only issues created on or after this date will be returned.</param>
     /// <param name="to">If specified, only issues created on or before this date will be returned.</param>
     /// <param name="isManaged">If specified, filters issues based on whether the associated region is managed by an organization.</param>
+    /// <param name="isPaidCustomer">If specified, filters issues based on whether the associated region is managed by a paid/ free organization.</param>
     /// <param name="hasRegion">If specified, filters issues based on whether a region is associated.</param>
     /// <param name="page">An optional non-zero positive integer indicating the number of the page to retrieve.</param>
     /// <param name="count">An optional non-zero positive integer indicating the number of results to return per page.</param>
@@ -240,6 +249,7 @@ namespace Decos.Fixi
         DateTimeOffset? from = null,
         DateTimeOffset? to = null,
         bool? isManaged = null,
+        bool? isPaidCustomer = null,
         bool? hasRegion = null,
         int page = 1,
         int count = 200,
@@ -260,6 +270,7 @@ namespace Decos.Fixi
     /// <param name="from">If specified, only issues created on or after this date will be returned.</param>
     /// <param name="to">If specified, only issues created on or before this date will be returned.</param>
     /// <param name="isManaged">If specified, filters issues based on whether the associated region is managed by an organization.</param>
+    /// <param name="isPaidCustomer">If specified, filters issues based on whether the associated region is managed by a paid/ free organization.</param>
     /// <param name="hasRegion">If specified, filters issues based on whether a region is associated.</param>
     /// <param name="sort">The sorting order.</param>
     /// <param name="page">An optional non-zero positive integer indicating the number of the page to retrieve.</param>
@@ -279,6 +290,7 @@ namespace Decos.Fixi
         DateTimeOffset? from = null,
         DateTimeOffset? to = null,
         bool? isManaged = null,
+        bool? isPaidCustomer = null,
         bool? hasRegion = null,
         SortOrder sort = SortOrder.Default,
         int page = 1,
@@ -296,6 +308,7 @@ namespace Decos.Fixi
     /// <param name="from">If specified, only issues created on or after this date will be returned.</param>
     /// <param name="to">If specified, only issues created on or before this date will be returned.</param>
     /// <param name="isManaged">If specified, filters issues based on whether the associated region is managed by an organization.</param>
+    /// <param name="isPaidCustomer">If specified, filters issues based on whether the associated region is managed by a paid/ free organization.</param>
     /// <param name="hasRegion">If specified, filters issues based on whether a region is associated.</param>
     /// <param name="page">An optional non-zero positive integer indicating the number of the page to retrieve.</param>
     /// <param name="count">An optional non-zero positive integer indicating the number of results to return per page.</param>
@@ -310,6 +323,7 @@ namespace Decos.Fixi
         DateTimeOffset? from = null,
         DateTimeOffset? to = null,
         bool? isManaged = null,
+        bool? isPaidCustomer = null,
         bool? hasRegion = null,
         int page = 1,
         int count = 20,
