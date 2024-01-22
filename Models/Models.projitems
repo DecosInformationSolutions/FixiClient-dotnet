@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)CommentDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IssueItemLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ReportRegionData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RegionPolygonData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Token.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OrganizationExtraSettings.cs" />
