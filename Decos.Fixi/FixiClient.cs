@@ -18,6 +18,7 @@ namespace Decos.Fixi
     private readonly Lazy<IIssuesApi> issuesApi;
     private readonly Lazy<IOrganizationsApi> organizationsApi;
     private readonly Lazy<IRegionsApi> regionsApi;
+    private readonly Lazy<IReportRegionsApi> reportRegionsApi;
     private readonly Lazy<ITeamsApi> teamsApi;
     private readonly Lazy<IUsersApi> usersApi;
     private readonly Lazy<ICommentsApi> commentsApi;
@@ -41,6 +42,7 @@ namespace Decos.Fixi
       attachmentsApi = new Lazy<IAttachmentsApi>(CreateApiInstance<IAttachmentsApi>);
       teamsApi = new Lazy<ITeamsApi>(CreateApiInstance<ITeamsApi>);
       regionsApi = new Lazy<IRegionsApi>(() => new RegionsApi(HttpClient));
+      reportRegionsApi = new Lazy<IReportRegionsApi>(() => new ReportRegionsApi(HttpClient));
       issuesApi = new Lazy<IIssuesApi>(() => new IssuesApi(HttpClient));
       organizationsApi = new Lazy<IOrganizationsApi>(CreateApiInstance<IOrganizationsApi>);
       usersApi = new Lazy<IUsersApi>(() => new UsersApi(HttpClient));
@@ -93,6 +95,11 @@ namespace Decos.Fixi
     /// Gets a reference to the regions API.
     /// </summary>
     public IRegionsApi Regions => regionsApi.Value;
+    
+    /// <summary>
+    /// Gets a reference to the report regions API.
+    /// </summary>
+    public IReportRegionsApi ReportRegions => reportRegionsApi.Value;
 
     /// <summary>
     /// Gets a reference to the teams API.

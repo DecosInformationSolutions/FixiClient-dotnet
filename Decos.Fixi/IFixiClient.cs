@@ -38,6 +38,11 @@ namespace Decos.Fixi
     IRegionsApi Regions { get; }
 
     /// <summary>
+    /// Gets a reference to the report regions API.
+    /// </summary>
+    IReportRegionsApi ReportRegions { get; }
+
+    /// <summary>
     /// Gets a reference to the teams API.
     /// </summary>
     ITeamsApi Teams { get; }
