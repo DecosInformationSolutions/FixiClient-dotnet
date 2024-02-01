@@ -41,6 +41,11 @@ namespace Decos.Fixi.Models
     public bool IsPaidCustomer { get; set; }
 
     /// <summary>
+    /// Gets or sets a value that describes whether the organization has report regions enabled or not
+    /// </summary>
+    public bool IsReportRegionsEnabled { get; set; }
+
+    /// <summary>
     /// Gets or sets the email address of the organization where replies should
     /// be sent to.
     /// </summary>
