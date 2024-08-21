@@ -19,6 +19,11 @@ namespace Decos.Fixi
     /// <param name="country">An optional country parameter to filter results</param>
     /// <param name="searchText">An optional filter to search organizations by name.</param>
     /// <param name="paidCustomerFilter">An optional filter to get paid/ non paid customers.</param>
+    /// <param name="reportRegionsFilter">An optional filter to get Report Regions customers.</param>
+    /// <param name="categoryPredictionFilter">An optional filter to get Category Prediction customers.</param>
+    /// <param name="requiredHandlingFilter">An optional filter to get Required Handling customers.</param>
+    /// <param name="anonymousReportFilter">An optional filter to get Anonymous Report customers.</param>
+    /// <param name="publicCommentsForCitizenFilter">An optional filter to get Public Comments for Citizen customers.</param>
     /// <param name="cancellationToken">A token to monitor for cancellation requests.</param>
     /// <returns>A task representing the asynchronous operation.</returns>
     [Get("/organizations/listAdmin")]
@@ -28,6 +33,11 @@ namespace Decos.Fixi
         string country = null,
         string searchText = null,
         PaidCustomerFilter paidCustomerFilter = PaidCustomerFilter.SelectPaidFilter,
+        BooleanFilter reportRegionsFilter = BooleanFilter.NoSelection,
+        BooleanFilter categoryPredictionFilter = BooleanFilter.NoSelection,
+        BooleanFilter requiredHandlingFilter = BooleanFilter.NoSelection,
+        BooleanFilter anonymousReportFilter = BooleanFilter.NoSelection,
+        BooleanFilter publicCommentsForCitizenFilter = BooleanFilter.NoSelection,
         CancellationToken cancellationToken = default(CancellationToken));
 
     /// <summary>
@@ -72,4 +82,11 @@ public enum PaidCustomerFilter
   SelectPaidFilter = 0,
   Paying = 1,
   NonPaying = 2,
+}
+
+public enum BooleanFilter
+{
+  NoSelection = 0,
+  True = 1,
+  False = 2
 }
