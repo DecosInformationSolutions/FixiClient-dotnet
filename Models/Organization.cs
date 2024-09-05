@@ -125,9 +125,9 @@ namespace Decos.Fixi.Models
     public bool ToValidateIssueHandle { get; set; }
 
     /// <summary>
-    /// Represents a specialized data transfer object of organization's extra settings.
+    ///  Gets or sets a value that describes whether the organization allows public comments by citizen
     /// </summary>
-    public OrganizationExtraSettings Settings { get; set; }
+    public bool AllowCitizenPublicComment { get; set; }
 
     /// <summary>
     /// Time zone id of the organization
