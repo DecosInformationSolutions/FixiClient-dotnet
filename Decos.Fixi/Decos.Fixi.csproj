@@ -101,7 +101,7 @@
       <Version>13.0.2</Version>
     </PackageReference>
     <PackageReference Include="Refit">
-      <Version>4.2.0</Version>
+      <Version>7.2.22</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="..\Models\Models.projitems" Label="Shared" />
