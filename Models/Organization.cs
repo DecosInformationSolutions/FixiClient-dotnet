@@ -57,6 +57,11 @@ namespace Decos.Fixi.Models
     public string EmailAddress { get; set; }
 
     /// <summary>
+    /// Gets or sets the email address used for sending notifications.
+    /// </summary>
+    public string NotificationEmailAddress { get; set; }
+
+    /// <summary>
     /// Type of the integration organization communicating.
     /// </summary>
     public IntegrationType IntegrationType { get; set; }
