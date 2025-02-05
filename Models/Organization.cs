@@ -124,6 +124,11 @@ namespace Decos.Fixi.Models
     public bool ToReportAnonymous { get; set; }
 
     /// <summary>
+    ///  Gets or sets a value that describes whether the organization requires subcategory for handling issues
+    /// </summary>
+    public bool RequireSubCatForHandling { get; set; }
+
+    /// <summary>
     /// Gets or sets a value that describes whether atleast one field in issue 
     /// handle screen is required while handling issue or not.
     /// </summary>
