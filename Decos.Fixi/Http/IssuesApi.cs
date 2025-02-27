@@ -94,6 +94,7 @@ namespace Decos.Fixi.Http
     /// <param name="address">Address (optional)</param>
     /// <param name="reporterName">Issue reporter name (optional)</param>
     /// <param name="reporterEmail">Issue reporter email address (optional)</param>
+    /// <param name="reporterPhoneNo">Issue reporter phone number (optional)</param>
     /// <param name="createdDate">Issue created date (optional)</param>
     /// <param name="searchPrivateInfo"><c>true</c> to search fields that may contain private information in addition to public information, or <c>false</c> to search only public information.</param>
     /// <param name="reportedBy">Optionally filters the results on reporter email address.</param>
@@ -116,6 +117,7 @@ namespace Decos.Fixi.Http
         string address = null,
         string reporterName = null,
         string reporterEmail = null,
+        string reporterPhoneNo = null,
         DateTimeOffset? createdDate = null,
         bool searchPrivateInfo = false,
         string reportedBy = null,
@@ -129,7 +131,7 @@ namespace Decos.Fixi.Http
         bool? hasRegion = null,
         CancellationToken cancellationToken = default)
     {
-      var args = new { q, id, description, organization, address, reporterName, reporterEmail, createdDate, searchPrivateInfo, reportedBy, assignedTo, category, status, from, to, isManaged, isPaidCustomer, hasRegion };
+      var args = new { q, id, description, organization, address, reporterName, reporterEmail, reporterPhoneNo, createdDate, searchPrivateInfo, reportedBy, assignedTo, category, status, from, to, isManaged, isPaidCustomer, hasRegion };
       return PostToStreamAsync("/issues/export", args, destination, cancellationToken);
     }
 
@@ -185,6 +187,7 @@ namespace Decos.Fixi.Http
     /// <param name="address">Address (optional)</param>
     /// <param name="reporterName">Issue reporter name (optional)</param>
     /// <param name="reporterEmail">Issue reporter email address (optional)</param>
+    /// <param name="reporterPhoneNo">Issue reporter Phone No (optional)</param>
     /// <param name="createdDate">Issue created date (optional)</param>
     /// <param name="searchPrivateInfo"><c>true</c> to search fields that may contain private information in addition to public information, or <c>false</c> to search only public information.</param>
     /// <param name="reportedBy">Optionally filters the results on reporter email address.</param>
@@ -209,6 +212,7 @@ namespace Decos.Fixi.Http
         string address = null,
         string reporterName = null,
         string reporterEmail = null,
+        string reporterPhoneNo = null,
         DateTimeOffset? createdDate = null,
         bool searchPrivateInfo = false,
         string reportedBy = null,
@@ -225,7 +229,7 @@ namespace Decos.Fixi.Http
         int count = 20,
         CancellationToken cancellationToken = default)
     {
-      var args = new { q, id, description, organization, address, reporterName, reporterEmail, createdDate, searchPrivateInfo, reportedBy, assignedTo, region, category, status, from, to, isManaged, isPaidCustomer, hasRegion, page, count };
+      var args = new { q, id, description, organization, address, reporterName, reporterEmail, reporterPhoneNo, createdDate, searchPrivateInfo, reportedBy, assignedTo, region, category, status, from, to, isManaged, isPaidCustomer, hasRegion, page, count };
       return GetAsync<ListPage<IssueListItem>>("/issues/listAdmin", args, cancellationToken);
     }
 
