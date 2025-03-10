@@ -129,6 +129,11 @@ namespace Decos.Fixi.Models
     public bool RequireSubCatForHandling { get; set; }
 
     /// <summary>
+    ///  Gets or sets a value that determines whether the reporter's details are visible in the printed issue
+    /// </summary>
+    public bool ShowReporterDetailsInPrint { get; set; }
+
+    /// <summary>
     /// Gets or sets a value that describes whether atleast one field in issue 
     /// handle screen is required while handling issue or not.
     /// </summary>
