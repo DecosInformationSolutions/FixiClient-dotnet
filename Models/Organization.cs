@@ -127,7 +127,12 @@ namespace Decos.Fixi.Models
     ///  Gets or sets a value that describes whether the organization requires subcategory for handling issues
     /// </summary>
     public bool RequireSubCatForHandling { get; set; }
-
+    
+    /// <summary>
+    ///  Gets or sets a value that determines whether the reporter's details are visible in the printed issue
+    /// </summary>
+    public bool ShowReporterDetailsInPrint { get; set; }
+    
     /// <summary>
     ///  Gets or sets a value that determines whether the reporter's details are visible in the printed issue
     /// </summary>
