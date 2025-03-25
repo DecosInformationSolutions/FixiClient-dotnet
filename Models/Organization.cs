@@ -134,6 +134,12 @@ namespace Decos.Fixi.Models
     public bool ShowReporterDetailsInPrint { get; set; }
 
     /// <summary>
+    /// Gets or sets a value that describes whether atleast one field in issue 
+    /// handle screen is required while handling issue or not.
+    /// </summary>
+    public bool ToValidateIssueHandle { get; set; }
+
+    /// <summary>
     /// Get or set the options that the handler must process to handle the issue.
     /// </summary>
     public IssueHandling IssueHandling { get; set; }
