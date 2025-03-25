@@ -139,12 +139,6 @@ namespace Decos.Fixi.Models
     public IssueHandling IssueHandling { get; set; }
 
     /// <summary>
-    /// Gets or sets a value that describes whether atleast one field in issue 
-    /// handle screen is required while handling issue or not.
-    /// </summary>
-    public bool ToValidateIssueHandle { get; set; }
-
-    /// <summary>
     ///  Gets or sets a value that describes whether the organization allows public comments by citizen
     /// </summary>
     public bool AllowCitizenPublicComment { get; set; }
