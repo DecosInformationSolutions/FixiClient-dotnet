@@ -35,7 +35,7 @@ namespace Decos.Fixi
         PaidCustomerFilter paidCustomerFilter = PaidCustomerFilter.SelectPaidFilter,
         BooleanFilter reportRegionsFilter = BooleanFilter.NoSelection,
         BooleanFilter categoryPredictionFilter = BooleanFilter.NoSelection,
-        BooleanFilter requiredHandlingFilter = BooleanFilter.NoSelection,
+        IssueHandling requiredHandlingFilter = IssueHandling.WithoutPhotoOrComment,
         BooleanFilter anonymousReportFilter = BooleanFilter.NoSelection,
         BooleanFilter publicCommentsForCitizenFilter = BooleanFilter.NoSelection,
         CancellationToken cancellationToken = default(CancellationToken));
@@ -89,4 +89,13 @@ public enum BooleanFilter
   NoSelection = 0,
   True = 1,
   False = 2
+}
+
+public enum IssueHandling
+{
+  WithoutPhotoOrComment = 0,
+  WithPhotoOrComment = 1,
+  WithPhoto = 2,
+  WithComment = 3,
+  WithPhotoAndComment = 4
 }
