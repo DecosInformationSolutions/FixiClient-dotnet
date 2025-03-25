@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)CommentDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssueHandling.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IssueItemLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ReportRegionData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RegionPolygonData.cs" />
