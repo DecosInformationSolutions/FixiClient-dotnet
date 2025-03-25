@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Decos.Fixi.Models
 {
@@ -132,11 +133,11 @@ namespace Decos.Fixi.Models
     ///  Gets or sets a value that determines whether the reporter's details are visible in the printed issue
     /// </summary>
     public bool ShowReporterDetailsInPrint { get; set; }
-    
+
     /// <summary>
-    ///  Gets or sets a value that determines whether the reporter's details are visible in the printed issue
+    /// Get or set the options that the handler must process to handle the issue.
     /// </summary>
-    public bool ShowReporterDetailsInPrint { get; set; }
+    public IssueHandling IssueHandling { get; set; }
 
     /// <summary>
     /// Gets or sets a value that describes whether atleast one field in issue 
