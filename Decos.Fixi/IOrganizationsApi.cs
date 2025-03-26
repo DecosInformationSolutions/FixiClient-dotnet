@@ -22,6 +22,7 @@ namespace Decos.Fixi
     /// <param name="reportRegionsFilter">An optional filter to get Report Regions customers.</param>
     /// <param name="categoryPredictionFilter">An optional filter to get Category Prediction customers.</param>
     /// <param name="requiredHandlingFilter">An optional filter to get Required Handling customers.</param>
+    /// <param name="issueHandlingFilter">An optional filter to get Required Handling customers.</param>
     /// <param name="anonymousReportFilter">An optional filter to get Anonymous Report customers.</param>
     /// <param name="publicCommentsForCitizenFilter">An optional filter to get Public Comments for Citizen customers.</param>
     /// <param name="cancellationToken">A token to monitor for cancellation requests.</param>
@@ -35,7 +36,8 @@ namespace Decos.Fixi
         PaidCustomerFilter paidCustomerFilter = PaidCustomerFilter.SelectPaidFilter,
         BooleanFilter reportRegionsFilter = BooleanFilter.NoSelection,
         BooleanFilter categoryPredictionFilter = BooleanFilter.NoSelection,
-        IssueHandling requiredHandlingFilter = IssueHandling.WithoutPhotoOrComment,
+        BooleanFilter requiredHandlingFilter = BooleanFilter.NoSelection,
+        IssueHandling issueHandlingFilter = IssueHandling.WithoutPhotoOrComment,
         BooleanFilter anonymousReportFilter = BooleanFilter.NoSelection,
         BooleanFilter publicCommentsForCitizenFilter = BooleanFilter.NoSelection,
         CancellationToken cancellationToken = default(CancellationToken));
