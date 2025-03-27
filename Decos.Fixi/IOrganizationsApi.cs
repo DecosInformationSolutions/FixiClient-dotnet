@@ -95,9 +95,10 @@ public enum BooleanFilter
 
 public enum IssueHandling
 {
-  WithoutPhotoOrComment = 0,
+  None = 0,
   WithPhotoOrComment = 1,
-  WithPhoto = 2,
-  WithComment = 3,
-  WithPhotoAndComment = 4
+  WithoutPhotoOrComment = 2,
+  WithPhotoAndComment = 3,
+  WithPhoto = 4,
+  WithComment = 5
 }
