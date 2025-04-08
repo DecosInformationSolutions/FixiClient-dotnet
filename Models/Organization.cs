@@ -145,6 +145,11 @@ namespace Decos.Fixi.Models
     public IssueHandling IssueHandling { get; set; }
 
     /// <summary>
+    /// Get or set the value that Show/Hide option for automatically handle issues after forwarding.
+    /// </summary>
+    public bool AllowAutoHandleOnForward { get; set; }
+
+    /// <summary>
     ///  Gets or sets a value that describes whether the organization allows public comments by citizen
     /// </summary>
     public bool AllowCitizenPublicComment { get; set; }
