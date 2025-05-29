@@ -150,6 +150,11 @@ namespace Decos.Fixi.Models
     public bool AllowAutoHandleOnForward { get; set; }
 
     /// <summary>
+    ///  Gets or sets a value that determines customer specific host domain
+    /// </summary>
+    public string HostDomainUrl { get; set; }
+
+    /// <summary>
     ///  Gets or sets a value that describes whether the organization allows public comments by citizen
     /// </summary>
     public bool AllowCitizenPublicComment { get; set; }
