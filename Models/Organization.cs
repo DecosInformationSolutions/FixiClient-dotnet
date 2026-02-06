@@ -163,5 +163,10 @@ namespace Decos.Fixi.Models
     /// Time zone id of the organization
     /// </summary>
     public string TimeZoneId { get; set; }
+
+    /// <summary>
+    ///  Gets or sets a value that determines days when handled/denied public issue should be visible on the map
+    /// </summary>
+    public int? ShowClosedIssuesOnMapDays { get; set; }
   }
 }
