@@ -167,6 +167,11 @@ namespace Decos.Fixi.Models
     /// <summary>
     ///  Gets or sets a value that determines days when handled/denied public issue should be visible on the map
     /// </summary>
-    public int? ShowClosedIssuesOnMapDays { get; set; }
+    public string ShowClosedIssuesOnMapDays { get; set; }
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the 'Rate the Issue' button should be disabled.
+    /// </summary>
+    public bool DisableIssueRating { get; set; }
   }
 }
